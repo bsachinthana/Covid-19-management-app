@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label for="password">Address</label>
-                <input formControlName="address" type="password" class="form-control" id="password" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+                <input formControlName="address" type="text" class="form-control" id="password" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
                 <div *ngIf="submitted && f.age.errors" class="error-msg">
                     <div *ngIf="f.address.errors.required">Address is required</div>
                 </div>
