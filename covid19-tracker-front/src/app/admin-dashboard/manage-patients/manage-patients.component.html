@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">District</th>
+                    <th scope="col">Date Positive</th>
+                    <th scope="col">From Quarantine</th>
+                    <th scope="col">Recent Travel History</th>
+                    <th scope="col">Status</th>                      
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let patient of patients; index as i">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ patient.name}}</td>
+                    <td>{{ patient.age | number }}</td>
+                    <td>{{ patient.address }}</td>
+                    <td>{{ patient.district }}</td>
+                    <td>{{ patient.datePositive | date }}</td>
+                    <td>{{ patient.fromQuarantine? 'yes':'no' }}</td>
+                    <td>{{ patient.recentTravelHistory != null ?  patient.recentTravelHistory.country: 'no'}}</td>
+                    <td>{{ patient.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
